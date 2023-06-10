@@ -1,6 +1,60 @@
+html {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    scroll-behavior: smooth;
+    min-height: 100%;
+    max-width: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+    text-decoration: none;
+    color: lightgray;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+    display: block;
+}
+
 body {
     color: #fff;
-    background: #17181c;
+    background: lightseagreen;
     font-family: sans-serif;
 }
 
@@ -13,23 +67,51 @@ header h1 {
     font-weight: 800;
 }
 
-footer {
+.footer__container {
     height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__copyright_link {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer__copyright_link:hover {
+    color: #69db7e;
+}
+
+.footer__links {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
 }
-footer .copyright {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
+
+.footer__github {
+    width: 24px;
+    transition: scale 0.3s ease-in-out;
 }
-footer .copyright a {
-    color: #444;
+
+.footer__rs-school {
+    width: 70px;
+    scale: 1;
+    transition: scale 0.3s ease-in-out;
 }
-footer .copyright a:hover {
-    color: #555;
-}
-footer .copyright:before {
-    content: '©';
+
+.footer__github:hover,
+.footer__rs-school:hover {
+    transform: scale(1.05);
 }
