@@ -37,4 +37,6 @@ export interface SourceData {
 
 export type AllData = Articles | Sources;
 
+export type Options<T> = { [key: string]: T };
+
 export type Callback<T> = (data?: T) => void;
