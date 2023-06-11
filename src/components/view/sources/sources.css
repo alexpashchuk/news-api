@@ -56,3 +56,11 @@
     font-weight: 400;
     white-space: nowrap;
 }
+
+@media (max-width: 450px) {
+    .source__item {
+        margin: 5px;
+        padding: 10px 5px;
+        transition: 0.3s;
+    }
+}
