@@ -3,7 +3,7 @@ import { Api, Links } from '../app/types';
 
 class AppLoader extends Loader {
     constructor() {
-        super(Links.local, {
+        super(Links.deploy, {
             apiKey: Api.key2,
         });
     }
