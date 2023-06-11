@@ -10,6 +10,11 @@ html {
     overflow-x: hidden;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -59,7 +64,7 @@ body {
 }
 
 header {
-    padding: 10px 30px;
+    padding: 30px;
 }
 
 header h1 {
@@ -74,7 +79,7 @@ header h1 {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .footer__copyright {
