@@ -45,3 +45,5 @@ export enum newsLinks {
     linkLocal = 'https://newsapi.org/v2/',
     linkDeploy = 'https://rss-news-api.onrender.com/',
 }
+
+export type IApiKey = string;

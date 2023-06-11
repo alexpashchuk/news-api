@@ -8,10 +8,15 @@
         <title>NewsPortal</title>
     </head>
     <body>
+    <div  class="wrapper">
         <header>
             <h1>News Portal</h1>
         </header>
         <main>
+            <div class="search">
+                <input type="text" class="search__input" value="Search..." onfocus="value=''" />
+                <button type="submit" class="search__btn">Search</button>
+            </div>
             <div class="sources buttons"></div>
             <div class="news"></div>
         </main>
@@ -55,6 +60,7 @@
             </div>
         </template>
 
-        <script src='./index.js'></script>
+    </div>
+    <script src='./index.js'></script>
     </body>
 </html>

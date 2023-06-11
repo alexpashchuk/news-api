@@ -63,6 +63,12 @@ body {
     font-family: sans-serif;
 }
 
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     padding: 30px;
 }
@@ -70,6 +76,10 @@ header {
 header h1 {
     font-size: 40px;
     font-weight: 800;
+}
+
+main {
+    flex: 1 1 auto;
 }
 
 .footer__container {
@@ -119,4 +129,50 @@ header h1 {
 .footer__github:hover,
 .footer__rs-school:hover {
     transform: scale(1.05);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 550px;
+}
+
+.search__input {
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+    color: black;
+    height: 52px;
+}
+
+.search__input:focus {
+    outline: none;
+    border: 1px solid lightseagreen;
+    box-shadow: 0 0 10px #30c5ff;
+}
+
+.search__btn {
+    cursor: pointer;
+    height: 52px;
+    width: 125px;
+    background-color: #30c5ff;
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+
+.search__btn:hover {
+    border-color: #3fcc59;
+    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
+}
+
+@media (max-width: 450px) {
+    .search {
+        flex-wrap: wrap;
+    }
 }
