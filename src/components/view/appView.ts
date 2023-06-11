@@ -15,7 +15,7 @@ export class AppView {
         this.news.draw(values);
     }
 
-    drawSources(data: SourceData | undefined) {
+    drawSources(data: Partial<SourceData> | undefined) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }

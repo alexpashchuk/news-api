@@ -8,7 +8,7 @@ export type Article = {
     content: string;
     description: string;
     publishedAt: string;
-    source: InitSource;
+    source: Pick<InitSource, 'id' | 'name'>;
     title: string;
     url: string;
     urlToImage: string;
@@ -41,9 +41,14 @@ export type Options<T> = { [key: string]: T };
 
 export type Callback<T> = (data?: T) => void;
 
-export enum newsLinks {
-    linkLocal = 'https://newsapi.org/v2/',
-    linkDeploy = 'https://rss-news-api.onrender.com/',
+export enum Links {
+    local = 'https://newsapi.org/v2/',
+    deploy = 'https://rss-news-api.onrender.com/',
+}
+
+export enum Api {
+    key1 = 'b3095f32b45e4809b0761a77753ace53',
+    key2 = 'ea66c5f005934e05a284826b3b050d0a',
 }
 
 export type IApiKey = string;
