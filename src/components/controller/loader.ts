@@ -1,4 +1,4 @@
-import { Callback, NewsData, Options, SourceData } from '../app/types';
+import { Callback, NewsData, Options, SourceData, ErrorStatus } from '../app/types';
 
 class Loader {
     readonly baseLink: string;
@@ -20,7 +20,7 @@ class Loader {
 
     errorHandler(res: Response): Response {
         if (!res.ok) {
-            if (res.status === 401 || res.status === 404)
+            if (res.status === ErrorStatus.Authenticate || res.status === ErrorStatus.NotFound)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
         }

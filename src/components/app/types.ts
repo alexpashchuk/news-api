@@ -51,4 +51,9 @@ export enum Api {
     key2 = 'ea66c5f005934e05a284826b3b050d0a',
 }
 
+export enum ErrorStatus {
+    NotFound = 404,
+    Authenticate = 401,
+}
+
 export type IApiKey = string;
