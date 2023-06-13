@@ -11,10 +11,12 @@ class App {
     }
 
     start(): void {
-        (<HTMLElement>document.querySelector('.sources')).addEventListener('click', (e): void =>
+        const sourcesElem: HTMLElement | null = document.querySelector('.sources');
+        sourcesElem?.addEventListener('click', (e): void =>
             this.controller.getNews(e, (data?: NewsData) => this.view.drawNews(data))
         );
-        (<HTMLElement>document.querySelector('.search')).addEventListener('submit', (e): void => {
+        const searchElem: HTMLElement | null = document.querySelector('.search');
+        searchElem?.addEventListener('submit', (e): void => {
             e.preventDefault();
             return this.controller.getSearch((data?: NewsData) => this.view.drawNews(data));
         });

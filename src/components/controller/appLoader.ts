@@ -1,5 +1,5 @@
 import Loader from './loader';
-import { Api, Links } from '../app/types';
+import { Api, Links } from '../app/constants';
 
 class AppLoader extends Loader {
     constructor() {

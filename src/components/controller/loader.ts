@@ -1,4 +1,5 @@
-import { Callback, NewsData, Options, SourceData, ErrorStatus } from '../app/types';
+import { Callback, NewsData, Options, SourceData } from '../app/types';
+import { ErrorStatus } from '../app/constants';
 
 class Loader {
     readonly baseLink: string;
@@ -28,7 +29,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: Options<string>, endpoint: string, keySearch: string) {
+    makeUrl(options: Options<string>, endpoint: string, keySearch: string): string {
         const urlOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
         if (keySearch) {
